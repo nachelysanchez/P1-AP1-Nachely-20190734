@@ -24,5 +24,15 @@ namespace P1_AP1_Nachely_20190734
         {
             InitializeComponent();
         }
+
+        private void RegistroMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultaMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
