@@ -13,7 +13,10 @@
                 <StackPanel Orientation="Horizontal">
                     <TextBox x:Name="IdTextBox" Height="20" Width="90" Text="{Binding AporteId}"/>
                     <Button x:Name="BuscarButton" Margin="10" Click="BuscarButton_Click">
-                        <Label Content="Buscar"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Buscar"/>
+                            <Image Source="/Resources/icons8-google-web-search-24.png" Height="20" HorizontalAlignment="Left" />
+                        </StackPanel>
                     </Button>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
@@ -33,16 +36,25 @@
                     <TextBox x:Name="MontoTextBox" Height="20" Width="300" Text="{Binding Monto}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5, 15">
-                    <Button x:Name="NuevoButton" Height="50" Width="60" Click="NuevoButton_Click">
-                        <StackPanel>
+                    <Button x:Name="NuevoButton" Height="40" Width="80" Click="NuevoButton_Click">
+                        <StackPanel Orientation="Horizontal">
                             <Label Content="Nuevo"/>
+                            <Image Source="/Resources/icons8-nuevo-48.png" Height="20" HorizontalAlignment="Left" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="GuardarButton" Height="50" Width="60" Click="GuardarButton_Click">
-                        <Label Content="Guardar"/>
+                    <Button x:Name="GuardarButton" Height="40" Width="80" Click="GuardarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Guardar"/>
+                            <Image Source="/Resources/icons8-guardar-48.png" Height="20" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                        
                     </Button>
-                    <Button x:Name="EliminarButton" Height="50" Width="60" Click="EliminarButton_Click">
-                        <Label Content="Eliminar"/>
+                    <Button x:Name="EliminarButton" Height="40" Width="80" Click="EliminarButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Eliminar"/>
+                            <Image Source="/Resources/icons8-eliminar-16.png" Height="20" HorizontalAlignment="Left"/>
+                        </StackPanel>
+                        
                     </Button>
                 </StackPanel>
             </StackPanel>
