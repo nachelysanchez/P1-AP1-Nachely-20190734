@@ -46,7 +46,14 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
-            
+            <StackPanel Orientation="Horizontal" >
+                <Label Content="Cantidad" />
+                <Label Content="Total" Margin="200,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="CantidadTextBlock" Height="30" Width="30" Margin="10"/>
+                <TextBlock x:Name="TotalTextBlock" Height="30" Width="30" Margin="210, 10"/>
+            </StackPanel>
 
         </StackPanel>
     </Grid>
