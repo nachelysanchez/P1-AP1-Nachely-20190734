@@ -32,6 +32,28 @@ namespace P1_AP1_Nachely_20190734.UI.Registros
             this.aporte = new Aportes();
             this.DataContext = aporte;
         }
+        private bool Validar()
+        {
+            bool esValido = true;
+
+            if (FechaDatePicker.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Ha ocurrido un error, inserte la fecha", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            if (PersonaTextBox.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Ha ocurrido un error, inserte el nombre de la persona", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            if (ConceptoTextBox.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Ha ocurrido un error, inserte el concepto", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            return esValido;
+        }
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var aportes = AportesBLL.Buscar(Utilidades.ToInt(IdTextBox.Text));
