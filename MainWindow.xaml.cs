@@ -1,4 +1,6 @@
-﻿using System;
+﻿using P1_AP1_Nachely_20190734.UI.Consultas;
+using P1_AP1_Nachely_20190734.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,12 +29,14 @@ namespace P1_AP1_Nachely_20190734
 
         private void RegistroMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rAportes registro = new rAportes();
+            registro.Show();
         }
 
         private void ConsultaMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cAportes consulta = new cAportes();
+            consulta.Show();
         }
     }
 }
