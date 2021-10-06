@@ -18,7 +18,7 @@ namespace P1_AP1_Nachely_20190734.BLL
         /// <param name="aporte">La entidad que se desea guardar</param>
         public static bool Guardar(Aportes aporte)
         {
-            if (Existe(aporte.AporteId))
+            if (!Existe(aporte.AporteId))
             {
                 return Insertar(aporte);
             }
@@ -37,7 +37,6 @@ namespace P1_AP1_Nachely_20190734.BLL
             Contexto contexto = new Contexto();
             try
             {
-                //Agregar la entidad que se desea insertar al contexto
                 contexto.Aportes.Add(aporte);
                 paso = contexto.SaveChanges() > 0;
             }
@@ -61,7 +60,7 @@ namespace P1_AP1_Nachely_20190734.BLL
             Contexto contexto = new Contexto();
             try
             {
-                contexto.Entry(aporte).State = EntityState.Modified;
+                contexto.Entry(aporte).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
